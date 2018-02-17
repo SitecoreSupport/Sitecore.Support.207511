@@ -10,7 +10,7 @@ namespace Sitecore.Support.Data.Managers
     protected override Item ApplySecurity(Item item, SecurityCheck securityCheck)
     {
       Assert.ArgumentNotNull(item, "item");
-      if (securityCheck == SecurityCheck.Disable || !item.Database.SecurityEnabled || item.Access.CanRead())
+      if (securityCheck == SecurityCheck.Disable || !item.Database.SecurityEnabled || SecurityStateSwitcher.CurrentValue == SecurityState.Disabled || item.Access.CanRead())
       {
         return item;
       }
@@ -20,7 +20,7 @@ namespace Sitecore.Support.Data.Managers
     protected override ItemList ApplySecurity(ItemList children, SecurityCheck securityCheck)
     {
       Assert.ArgumentNotNull(children, "children");
-      if (children.Count == 0 || securityCheck == SecurityCheck.Disable || !children[0].Database.SecurityEnabled || Context.User.IsAdministrator)
+      if (children.Count == 0 || securityCheck == SecurityCheck.Disable || !children[0].Database.SecurityEnabled || SecurityStateSwitcher.CurrentValue == SecurityState.Disabled || Context.User.IsAdministrator)
       {
         return children;
       }
