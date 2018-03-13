@@ -1,5 +1,5 @@
 # Sitecore.Support.207511
-SetActiveUser may fail with NullReferenceException
+AuthenticationManager.SetActiveUser may fail with NullReferenceException
 
 ## License  
 This patch is licensed under the [Sitecore Corporation A/S License for GitHub](https://github.com/sitecoresupport/Sitecore.Support.207511/blob/master/LICENSE).  
