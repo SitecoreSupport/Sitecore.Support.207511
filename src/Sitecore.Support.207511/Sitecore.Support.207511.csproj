@@ -53,7 +53,8 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Managers\ItemProvider.cs" />
+    <Compile Include="Security\Authentication\FormsAuthenticationHelper.cs" />
+    <Compile Include="Security\Authentication\FormsAuthenticationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
