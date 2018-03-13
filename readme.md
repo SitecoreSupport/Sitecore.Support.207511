@@ -1,5 +1,5 @@
 # Sitecore.Support.207511
-Access rights are resolved even in context of SecurityDisabler
+SetActiveUser may fail with NullReferenceException
 
 ## License  
 This patch is licensed under the [Sitecore Corporation A/S License for GitHub](https://github.com/sitecoresupport/Sitecore.Support.207511/blob/master/LICENSE).  
